@@ -1,0 +1,18 @@
+<div class="client-info-container">
+    <h2>Client Information</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Projects</th>
+        <th>Tasks Completed</th>
+        <th>Effort</th>
+      </tr>
+      <tr *ngFor="let client of clients">
+        <td>{{client.name}}</td>
+        <td>{{client.projects}}</td>
+        <td>{{client.tasksCompleted}}</td>
+        <td>{{client.effort}}</td>
+      </tr>
+    </table>
+  </div>
+  

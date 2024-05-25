@@ -1,0 +1,51 @@
+
+
+<div *ngIf="project">
+    <h2>Assign Task to {{ project.name }}</h2>
+    
+    <!-- Button to toggle the form visibility -->
+    <button (click)="toggleFormVisibility()">Create Task</button>
+  
+    <!-- Form for creating a new task -->
+    <form *ngIf="showForm" (ngSubmit)="createTask()">
+      <div>
+        <label for="taskName">Task Name:</label>
+        <input id="taskName" [(ngModel)]="task.name" name="name" required>
+      </div>
+      
+      <div>
+        <label for="taskDescription">Task Description:</label>
+        <input id="taskDescription" [(ngModel)]="task.description" name="description" required>
+      </div>
+      
+      <div>
+        <label for="assignedTo">Assigned To:</label>
+        <select id="assignedTo" [(ngModel)]="task.assignedTo" name="assignedTo" required>
+          <option *ngFor="let member of project.teamMembers" [value]="member.id">
+            {{ member.name }} ({{ member.role }})
+          </option>
+        </select>
+      </div>
+      
+      <button type="submit">Submit Task</button>
+    </form>
+    
+    <h3>Existing Tasks</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Task Name</th>
+          <th>Description</th>
+          <th>Assigned To</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of project.tasks">
+          <td>{{ task.name }}</td>
+          <td>{{ task.description }}</td>
+          <td>{{ getMemberName(task.assignedTo) }}</td> 
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

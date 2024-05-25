@@ -1,0 +1,27 @@
+<!-- <div *ngIf="project">
+    <h2>Project Details</h2>
+    <p><strong>Project ID:</strong> {{ project.projectId }}</p>
+    <p><strong>Project Name:</strong> {{ project.projectName }}</p>
+    <p><strong>Project Description:</strong> {{ project.projectDescription }}</p>
+    <p><strong>Client Name:</strong> {{ project.clientName }}</p>
+    <p><strong>Client Info:</strong> {{ project.clientInfo }}</p>
+    <p><strong>Assign Date:</strong> {{ project.assignDate }}</p>
+    <p><strong>Due Date:</strong> {{ project.dueDate }}</p>
+  </div> -->
+
+  <div *ngIf="project">
+    <h2>Project Details</h2>
+    <p><strong>Project ID:</strong> {{ project.projectId }}</p>
+    <p><strong>Project Name:</strong> {{ project.projectName }}</p>
+    <p><strong>Project Description:</strong> {{ project.projectDescription }}</p>
+    <p><strong>Client Name:</strong> {{ project.clientName }}</p>
+    <p><strong>Client Info:</strong> {{ project.clientInfo }}</p>
+    <p><strong>Assign Date:</strong> {{ project.assignDate | date }}</p>
+    <p><strong>Due Date:</strong> {{ project.dueDate | date }}</p>
+  </div>
+  <div *ngIf="!project">
+    <p>No project found with the given ID.</p>
+  </div>
+  
+  
+  

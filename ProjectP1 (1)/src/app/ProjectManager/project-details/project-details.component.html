@@ -1,0 +1,23 @@
+<div class="project-details-container" *ngIf="project">
+    <h2>{{ project?.name }}</h2>
+    <p>{{ project?.description }}</p>
+    <p><strong>Client:</strong> {{ project?.clientName }}</p>
+  
+    <h3>Team Members</h3>
+    <ul>
+      <li *ngFor="let member of project?.teamMembers">
+        {{ member.name }} ({{ member.role }})
+        <button>Remove</button>
+      </li>
+    </ul>
+    <!-- <button (click)="addMember()">Add Member</button> -->
+  
+    <h3>Tasks</h3>
+    <ul>
+      <li *ngFor="let task of project?.tasks">
+        <!-- {{ task.name }} - {{ task.description }} (Assigned to: {{ getAssignedMemberName(task.assignedTo) }}) -->
+      </li>
+    </ul>
+    <!-- <button (click)="viewTaskAssign()">Assign Task</button> -->
+  </div>
+  
