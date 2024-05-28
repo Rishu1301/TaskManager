@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
-export class ProjectsComponent implements OnInit {
+export class PMProjectsComponent implements OnInit {
   
   
   projects: Observable<Project[]> | undefined;

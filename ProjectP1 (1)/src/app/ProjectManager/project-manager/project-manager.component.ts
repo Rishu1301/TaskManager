@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./project-manager.component.css']
 })
 export class ProjectManagerComponent {
-  constructor() { }
+
   
 }

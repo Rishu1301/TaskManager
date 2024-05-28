@@ -1,8 +1,42 @@
-<div class="login-container">
+<!-- <div class="login-container">
     <h2>Login</h2>
     <input type="text" placeholder="Username" [(ngModel)]="username" />
     <input type="password" placeholder="Password" [(ngModel)]="password" />
     <button (click)="login()">Login</button>
     <a routerLink="/reset-password">Forgot Password?</a>
   </div>
+   -->
+
+   <div class="wrapper">
+    <div class="title-text">
+      <div class="title login" #loginText>Project Manager</div>
+     
+    </div>
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="login" checked>
+        <input type="radio" name="slide" id="signup">
+        <label for="login" class="slide login" #loginBtn (click)="switchToLoginAd()">Login</label>
   
+        <div class="slider-tab"></div>
+      </div>
+      <div class="form-inner">
+        <form action="#" class="login" #loginForm>
+          <div class="field">
+            <input type="text" placeholder="Email Address" required>
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Password" required>
+          </div>
+          <div class="pass-link"><a href="#">Change Password?</a></div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Login"  (click) = "redirect()">
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+
+

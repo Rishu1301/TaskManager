@@ -11,6 +11,13 @@ import { AProjectsComponent } from './Admin/a-projects/a-projects.component';
 import { UserDashboardComponent } from './TeamMember/TaskDashboard/user-dashboard/user-dashboard.component';
 import { ProjectDetailComponent } from './TeamMember/TaskDashboard/project-detail/project-detail.component';
 import { ADashboardComponent } from './Admin/a-dashboard/a-dashboard.component';
+import { ProjectManagerLoginComponent } from './ProjectManager/login/login.component';
+import { PmNavbarComponent } from './ProjectManager/navbar/navbar.component';
+import { ProjectManagerComponent } from './ProjectManager/project-manager/project-manager.component';
+import {PMDashboardComponent } from './ProjectManager/dashboard/dashboard.component';
+import { PMClientInfoComponent } from './ProjectManager/client-info/client-info.component';
+import { PMProjectsComponent } from './ProjectManager/projects/projects.component';
+
 
 const routes: Routes = [
   {
@@ -61,7 +68,32 @@ const routes: Routes = [
   {
     path:'AdminDashboard',
     component:ADashboardComponent
+  },
+  {
+    path:'ProjectManegerLogin',
+    component:ProjectManagerLoginComponent
+  },
+  {
+    path:'PmHomePage',
+    component:ProjectManagerComponent
+  },
+  {
+    path:"PmnavBar",
+    component:PmNavbarComponent
+  },
+  {
+    path:"PMDashboard",
+    component:PMDashboardComponent
+  },
+  {
+    path:'PmClientInfo',
+    component:PMClientInfoComponent
+  },
+  {
+    path:'PMProjects',
+    component:PMProjectsComponent
   }
+  
 ];
 
 @NgModule({

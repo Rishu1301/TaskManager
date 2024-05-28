@@ -31,14 +31,15 @@ import { ProjectService } from './project.service';
 import { TaskService } from './task.service';
 import { UserServiceService } from './user-service.service';
 import { TDashboardComponent } from './TeamMember/t-dashboard/t-dashboard.component';
-import { ClientInfoComponent } from './ProjectManager/client-info/client-info.component';
+import { PMClientInfoComponent } from './ProjectManager/client-info/client-info.component';
 import { CreateTaskModalComponentComponent } from './ProjectManager/create-task-modal-component/create-task-modal-component.component';
-import { DashboardComponent } from './ProjectManager/dashboard/dashboard.component';
+import { PMDashboardComponent } from './ProjectManager/dashboard/dashboard.component';
 import { ProjectDetailsComponent } from './ProjectManager/project-details/project-details.component';
 import { ProjectManagerComponent } from './ProjectManager/project-manager/project-manager.component';
-import { ProjectsComponent } from './ProjectManager/projects/projects.component';
+import { PMProjectsComponent } from './ProjectManager/projects/projects.component';
 import { ResetPasswordComponent } from './ProjectManager/reset-password/reset-password.component';
 import { TaskAssignComponent } from './ProjectManager/task-assign/task-assign.component';
+import { PmNavbarComponent } from './ProjectManager/navbar/navbar.component';
 
 
 @NgModule({
@@ -67,14 +68,15 @@ import { TaskAssignComponent } from './ProjectManager/task-assign/task-assign.co
     ProjectDetailComponent,
     UserDashboardComponent,
     TDashboardComponent,
-    ClientInfoComponent,
+    PMClientInfoComponent,
     CreateTaskModalComponentComponent,
-    DashboardComponent,
+    PMDashboardComponent,
     ProjectDetailsComponent,
     ProjectManagerComponent,
-    ProjectsComponent,
+    PMProjectsComponent,
     ResetPasswordComponent,
-    TaskAssignComponent
+    TaskAssignComponent,
+    PmNavbarComponent
 
   
   ],

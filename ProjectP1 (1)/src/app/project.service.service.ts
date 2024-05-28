@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, filter, of, switchMap, tap } from 'rxjs';
-import { Project, Task } from './projectp'; // Adjust the path as needed
+import { ProjectP, Task } from './projectp'; // Adjust the path as needed
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
@@ -17,22 +17,22 @@ export class ProjectServiceService {
   };
 
   
-  getProjects(): Observable<Project[]> {
-    return this.http.get<Project[]>(`${this.apiURL}/projects`).pipe(
+  getProjects(): Observable<ProjectP[]> {
+    return this.http.get<ProjectP[]>(`${this.apiURL}/projects`).pipe(
       tap(projects => console.log('Fetched projects:', projects))
     );
   }
 
-  getProjectById(id: number): Observable<Project | undefined> {
+  getProjectById(id: number): Observable<ProjectP | undefined> {
     
-    return this.http.get<Project>(`${this.apiURL}/projects/${id}`);
+    return this.http.get<ProjectP>(`${this.apiURL}/projects/${id}`);
   }
-  addTaskToProject(projectId: number, task: Task): Observable<Project> {
+  addTaskToProject(projectId: number, task: Task): Observable<ProjectP> {
     return this.getProjectById(projectId).pipe(
-      filter((project): project is Project => project !== undefined),
-      switchMap((project: Project) => {
+      filter((project): project is ProjectP => project !== undefined),
+      switchMap((project: ProjectP) => {
         project.tasks.push(task);
-        return this.http.put<Project>(`${this.apiURL}/projects/${projectId}`, project, this.httpOptions);
+        return this.http.put<ProjectP>(`${this.apiURL}/projects/${projectId}`, project, this.httpOptions);
       })
     );
   }

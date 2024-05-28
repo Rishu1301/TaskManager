@@ -12,7 +12,7 @@ export interface TeamMember {
     assignedTo: number;
   }
   
-  export interface Project {
+  export interface ProjectP {
     id: number;
     name: string;
     description: string;

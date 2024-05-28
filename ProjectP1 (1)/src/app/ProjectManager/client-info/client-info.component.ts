@@ -8,7 +8,7 @@ import { ClientService } from '../../client.service';
   templateUrl: './client-info.component.html',
   styleUrls: ['./client-info.component.css']
 })
-export class ClientInfoComponent implements OnInit {
+export class PMClientInfoComponent implements OnInit {
   clients: any[] = [];
 
   constructor(private clientService: ClientService) { }
